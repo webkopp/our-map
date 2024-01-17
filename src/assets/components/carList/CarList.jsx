@@ -2,7 +2,7 @@ import CarItem from "../../carItem/CarItem";
 import  {v4 as uuidv4 } from "uuid"
 
 const CarList = ({cars}) => {
-    console.log(.cars)
+    console.log(cars)
     return ( 
     <>
 
@@ -17,15 +17,15 @@ const CarList = ({cars}) => {
         <h1>Das ist CarList Component</h1>
 
         {cars.map((car, index) => {
-           
-             <CarItem 
-             key={index}
-             marke={car.marke}
-             farbe={car.farbe}
-             modell={car.modell}
-             produktionsjahr={car.produktionsjahr}
-             ps={car.ps}
-             />
+           return (    <CarItem 
+            key={index}
+            marke={car.marke}
+            farbe={car.farbe}
+            modell={car.modell}
+            produktionsjahr={car.produktionsjahr}
+            ps={car.ps}
+            />)
+         
         
     })}
        
